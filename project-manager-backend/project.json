@@ -1,0 +1,26 @@
+{
+  "name": "project-manager-backend",
+  "$schema": "../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "project-manager-backend/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "dependsOn": ["build"],
+      "options": {
+        "buildTarget": "project-manager-backend:build",
+        "runBuildTargetDependencies": false
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "project-manager-backend:build:development"
+        },
+        "production": {
+          "buildTarget": "project-manager-backend:build:production"
+        }
+      }
+    }
+  }
+}
