@@ -1,6 +1,6 @@
 // src/app/modules/user-authentication/logout.tsx
 import React from 'react';
-import { supabase } from '../../../supabaseClient';
+import { supabase } from '../../supabaseClient';
 
 const Logout: React.FC = () => {
   const handleLogout = async () => {

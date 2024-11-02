@@ -1,13 +1,9 @@
-import Login from './modules/user-authentication/login';
-import Logout from './modules/user-authentication/logout';
-import SignUp from './modules/user-authentication/signup';
+import { Userauth } from './modules/user-authentication/user-authentication';
 
 export function App() {
   return (
     <>
-      <Login></Login>
-      <SignUp></SignUp>
-      <Logout></Logout>
+      <Userauth></Userauth>
     </>
   );
 }

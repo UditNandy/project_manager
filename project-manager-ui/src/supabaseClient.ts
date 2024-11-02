@@ -1,4 +1,3 @@
-// src/supabaseClient.ts
 import { createClient } from '@supabase/supabase-js';
 
 export type Database = {
@@ -6,16 +5,18 @@ export type Database = {
     Tables: {
       users: {
         Row: {
-          id: string;
-          email: string;
-          password_hash: string | null;
+          id: any;
+          email: any;
+          password_hash: any | null;
+          displayName: any;
         };
         Insert: {
-          email: string;
-          password_hash?: string | null;
+          email: any;
+          password_hash?: any | null;
+          displayName: any;
         };
         Update: {
-          password_hash?: string | null;
+          password_hash?: any | null;
         };
       };
     };
